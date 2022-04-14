@@ -13,8 +13,10 @@ interface UserDetailsFormProps {
 export const UserDetailsForm = ({
   setActiveFormIndex,
 }: UserDetailsFormProps) => {
-  const handleSubmit = () => {
+  const handleSubmit = (values: Forms.UserDetailsForm) => {
     // API call goes here
+    // eslint-disable-next-line no-console
+    console.log({ values });
 
     setActiveFormIndex(1);
   };
@@ -29,7 +31,7 @@ export const UserDetailsForm = ({
         <p className="mt-2 text-zinc-500">You can always change them later.</p>
       </header>
 
-      <Formik
+      <Formik<Forms.UserDetailsForm>
         initialValues={{ fullName: '', displayName: '' }}
         onSubmit={handleSubmit}
       >
