@@ -4,7 +4,7 @@ import { FireIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import { AnimatePresence } from 'framer-motion';
 
-import { UserDetailsForm } from '@/components/UserDetailsForm/UserDetailsForm';
+import { UserDetailsForm } from '@/containers/UserDetailsForm/UserDetailsForm';
 
 export const Landing = () => {
   const [activeFormIndex, setActiveFormIndex] = useState<FormIndex>(0);
