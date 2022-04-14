@@ -13,7 +13,15 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          main: '#5A4AD1',
+          secondary: '#40434A',
+          dark: '#2415C9',
+        },
+      },
+    },
   },
   variants: {},
   plugins: [],
