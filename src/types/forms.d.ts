@@ -3,4 +3,9 @@ declare namespace Forms {
     fullName: string;
     displayName: string;
   }
+
+  interface WorkspaceForm {
+    name: string;
+    url?: string;
+  }
 }

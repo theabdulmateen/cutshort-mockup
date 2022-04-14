@@ -6,14 +6,12 @@ import { motion } from 'framer-motion';
 import { InputField } from '@/components/InputField/InputField';
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
 
-interface UserDetailsFormProps {
+interface WorkspaceFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;
 }
 
-export const UserDetailsForm = ({
-  setActiveFormIndex,
-}: UserDetailsFormProps) => {
-  const handleSubmit = (values: Forms.UserDetailsForm) => {
+export const WorkspaceForm = ({ setActiveFormIndex }: WorkspaceFormProps) => {
+  const handleSubmit = (values: Forms.WorkspaceForm) => {
     // API call goes here
     // eslint-disable-next-line no-console
     console.log({ values });
@@ -25,28 +23,32 @@ export const UserDetailsForm = ({
     <motion.div>
       <header className="text-center">
         <h4 className="text-4xl font-semibold text-black">
-          Welcome! First Things first...
+          Let&apos;s set up a home for all your work
         </h4>
 
-        <p className="mt-2 text-zinc-500">You can always change them later.</p>
+        <p className="mt-2 text-zinc-500">
+          You can always create another workspace later.
+        </p>
       </header>
 
-      <Formik<Forms.UserDetailsForm>
-        initialValues={{ fullName: '', displayName: '' }}
+      <Formik<Forms.WorkspaceForm>
+        initialValues={{ name: '', url: '' }}
         onSubmit={handleSubmit}
       >
         <Form className="flex flex-col max-w-md gap-6 pb-24 mx-auto mt-12 text-lg text-zinc-600/80">
           <InputField
-            placeholder="Steve Jobs"
-            label="Full Name"
-            name="fullName"
+            placeholder="Eden"
+            label="Workspace Name"
+            name="name"
             type="text"
           />
 
           <InputField
-            placeholder="Steve"
-            label="Display Name"
-            name="displayName"
+            optional
+            leftAdornment="www.eden.com/"
+            placeholder="Example"
+            label="Workspace URL"
+            name="url"
             type="text"
           />
 

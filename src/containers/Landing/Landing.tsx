@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { AnimatePresence } from 'framer-motion';
 
 import { UserDetailsForm } from '@/containers/UserDetailsForm/UserDetailsForm';
+import { WorkspaceForm } from '@/containers/WorkspaceForm/WorkspaceForm';
 
 export const Landing = () => {
   const [activeFormIndex, setActiveFormIndex] = useState<FormIndex>(0);
@@ -14,7 +15,7 @@ export const Landing = () => {
       case 0:
         return <UserDetailsForm setActiveFormIndex={setActiveFormIndex} />;
       case 1:
-        return <div>form 2</div>;
+        return <WorkspaceForm setActiveFormIndex={setActiveFormIndex} />;
       case 2:
         return <div>form 3</div>;
       case 3:
