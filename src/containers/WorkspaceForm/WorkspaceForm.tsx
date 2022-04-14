@@ -16,7 +16,7 @@ export const WorkspaceForm = ({ setActiveFormIndex }: WorkspaceFormProps) => {
     // eslint-disable-next-line no-console
     console.log({ values });
 
-    setActiveFormIndex(1);
+    setActiveFormIndex(2);
   };
 
   return (

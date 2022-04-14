@@ -4,6 +4,7 @@ import { FireIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import { AnimatePresence } from 'framer-motion';
 
+import { UseCasesForm } from '@/containers/UseCasesForm/UseCasesForm';
 import { UserDetailsForm } from '@/containers/UserDetailsForm/UserDetailsForm';
 import { WorkspaceForm } from '@/containers/WorkspaceForm/WorkspaceForm';
 
@@ -17,7 +18,7 @@ export const Landing = () => {
       case 1:
         return <WorkspaceForm setActiveFormIndex={setActiveFormIndex} />;
       case 2:
-        return <div>form 3</div>;
+        return <UseCasesForm setActiveFormIndex={setActiveFormIndex} />;
       case 3:
         return <div>form 4</div>;
       default:
