@@ -4,6 +4,7 @@ import { CheckIcon } from '@heroicons/react/solid';
 import { motion } from 'framer-motion';
 
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
+import { formVariants } from '@/constants/index';
 
 interface UseCasesFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;
@@ -18,7 +19,13 @@ export const Feedback = ({ setActiveFormIndex }: UseCasesFormProps) => {
   };
 
   return (
-    <motion.div>
+    <motion.div
+      variants={formVariants}
+      key="feedback-form"
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <header className="flex flex-col items-center text-center">
         <div className="grid w-16 h-16 rounded-full bg-primary-main place-items-center">
           <CheckIcon width={25} height={25} color="white" />

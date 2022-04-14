@@ -6,6 +6,7 @@ import { Formik, Form } from 'formik';
 import { motion } from 'framer-motion';
 
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
+import { formVariants } from '@/constants/index';
 
 interface UseCasesFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;
@@ -21,7 +22,13 @@ export const UseCasesForm = ({ setActiveFormIndex }: UseCasesFormProps) => {
   };
 
   return (
-    <motion.div>
+    <motion.div
+      variants={formVariants}
+      key="use-cases-form"
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <header className="text-center">
         <h4 className="text-4xl font-semibold text-black">
           How are you planning to use Eden?

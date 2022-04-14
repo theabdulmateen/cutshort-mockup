@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 import { InputField } from '@/components/InputField/InputField';
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
+import { formVariants } from '@/constants/index';
 
 interface UserDetailsFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;
@@ -22,7 +23,13 @@ export const UserDetailsForm = ({
   };
 
   return (
-    <motion.div>
+    <motion.div
+      variants={formVariants}
+      key="user-details-form"
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <header className="text-center">
         <h4 className="text-4xl font-semibold text-black">
           Welcome! First Things first...

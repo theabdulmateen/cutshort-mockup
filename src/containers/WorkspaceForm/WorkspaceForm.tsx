@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 import { InputField } from '@/components/InputField/InputField';
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
+import { formVariants } from '@/constants/index';
 
 interface WorkspaceFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;
@@ -20,7 +21,13 @@ export const WorkspaceForm = ({ setActiveFormIndex }: WorkspaceFormProps) => {
   };
 
   return (
-    <motion.div>
+    <motion.div
+      variants={formVariants}
+      key="workspace-form"
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <header className="text-center">
         <h4 className="text-4xl font-semibold text-black">
           Let&apos;s set up a home for all your work
