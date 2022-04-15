@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { FireIcon } from '@heroicons/react/solid';
 import { AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 import { StepperButton } from '@/components/StepperButton/StepperButton';
 import { Feedback } from '@/containers/Feedback/Feedback';
@@ -33,7 +33,12 @@ export const Landing = () => {
         <header className="flex flex-col items-center gap-20">
           <div>
             <h4 className="flex items-center gap-2 text-4xl font-semibold">
-              <FireIcon width={50} height={50} color="#5A4AD1" />
+              <Image
+                src={require('@/images/logo.png')}
+                width={45}
+                height={45}
+                alt="Eden Logo"
+              />
               <span>Eden</span>
             </h4>
           </div>
