@@ -6,7 +6,7 @@ import { Formik, Form } from 'formik';
 import { motion } from 'framer-motion';
 
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
-import { formVariants } from '@/constants/index';
+import { formVariants } from '@/constants/variants';
 
 interface UseCasesFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;

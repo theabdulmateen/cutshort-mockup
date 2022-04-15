@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 import { InputField } from '@/components/InputField/InputField';
 import { SubmitButton } from '@/components/SubmitButton/SubmitButton';
-import { formVariants } from '@/constants/index';
+import { formVariants } from '@/constants/variants';
 
 interface UserDetailsFormProps {
   setActiveFormIndex: Dispatch<SetStateAction<FormIndex>>;
