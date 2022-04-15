@@ -48,6 +48,7 @@ export const UserDetailsForm = ({
             label="Full Name"
             name="fullName"
             type="text"
+            required
           />
 
           <InputField
@@ -55,6 +56,7 @@ export const UserDetailsForm = ({
             label="Display Name"
             name="displayName"
             type="text"
+            required
           />
 
           <SubmitButton />

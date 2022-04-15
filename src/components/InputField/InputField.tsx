@@ -8,6 +8,7 @@ interface InputFieldProps {
   label: string;
   placeholder: string;
   disabled?: boolean;
+  required?: boolean;
   optional?: boolean;
   leftAdornment?: string | JSX.Element;
   type?: string;
@@ -19,6 +20,7 @@ export const InputField = ({
   placeholder,
   optional,
   leftAdornment,
+  required,
   type = 'text',
 }: InputFieldProps) => {
   return (
@@ -38,6 +40,7 @@ export const InputField = ({
         <Field
           name={name}
           type={type}
+          required={!!required}
           placeholder={placeholder}
           className={clsx('w-full px-4 outline-none rounded-md py-3', {
             'pl-44': Boolean(leftAdornment),

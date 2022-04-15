@@ -48,6 +48,7 @@ export const WorkspaceForm = ({ setActiveFormIndex }: WorkspaceFormProps) => {
             label="Workspace Name"
             name="name"
             type="text"
+            required
           />
 
           <InputField
@@ -57,6 +58,7 @@ export const WorkspaceForm = ({ setActiveFormIndex }: WorkspaceFormProps) => {
             label="Workspace URL"
             name="url"
             type="text"
+            required
           />
 
           <SubmitButton />
