@@ -21,6 +21,9 @@ module.exports = {
           dark: '#2415C9',
         },
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   variants: {},
