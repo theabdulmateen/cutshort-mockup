@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import { FireIcon } from '@heroicons/react/solid';
-import clsx from 'clsx';
 import { AnimatePresence } from 'framer-motion';
 
+import { StepperButton } from '@/components/StepperButton/StepperButton';
 import { Feedback } from '@/containers/Feedback/Feedback';
 import { UseCasesForm } from '@/containers/UseCasesForm/UseCasesForm';
 import { UserDetailsForm } from '@/containers/UserDetailsForm/UserDetailsForm';
@@ -39,36 +39,14 @@ export const Landing = () => {
           </div>
 
           <div className="flex gap-[30px] md:gap-[60px] relative">
-            <div className="absolute w-full -translate-y-1/2 z-[-1] top-1/2">
-              <div
-                className={clsx('h-[1px] bg-zinc-500 w-full transition-all')}
+            {Array.from({ length: 4 }).map((_, index) => (
+              <StepperButton
+                key={`stepper-button-${index}`}
+                activeFormIndex={activeFormIndex}
+                formIndex={index as FormIndex}
+                setActiveFormIndex={setActiveFormIndex}
               />
-            </div>
-
-            <button
-              onClick={() => setActiveFormIndex(0)}
-              className="w-10 h-10 text-white rounded-full bg-primary-main"
-            >
-              1
-            </button>
-            <button
-              onClick={() => setActiveFormIndex(1)}
-              className="w-10 h-10 text-white rounded-full bg-primary-main"
-            >
-              2
-            </button>
-            <button
-              onClick={() => setActiveFormIndex(2)}
-              className="w-10 h-10 text-white rounded-full bg-primary-main"
-            >
-              3
-            </button>
-            <button
-              onClick={() => setActiveFormIndex(3)}
-              className="w-10 h-10 text-white rounded-full bg-primary-main"
-            >
-              4
-            </button>
+            ))}
           </div>
         </header>
 
